@@ -1,0 +1,39 @@
+html, body {
+  background: url(../background.jpg) no-repeat center center fixed;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+p#introduction {
+    position: absolute;
+    top: 370px;
+    right: 16%;
+    font-family: 'Atma';
+    width: 450px;
+    font-size: 25px;
+}
+
+span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#email_subscription {
+    position: absolute;
+    top: 90%;
+}
+
+#email {
+    /* position: absolute; */
+    height: 50px;
+    width: 300px;
+}
+
+.submit-button {
+    float: right;
+    /* position: absolute; */
+    /* right: 0px; */
+    height: 50px;
+    width: 100px;
+}
