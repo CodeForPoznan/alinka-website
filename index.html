@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="assets/main.css">
     <link href='https://fonts.googleapis.com/css?family=Atma&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src=".config/config.js"></script>
+    <script src=".config/local_config.js"></script>
     <script src="assets/js/send_form_to_google.js"></script>
     <title>Alinka - Łatwiejsze wydawanie orzeczeń</title>
 </head>
@@ -14,10 +16,11 @@
         <span>"Alinka"</span> jest aplikacją desktopową, która wspiera wydawanie orzeczeń, wraz z innymi niezbędnymi dokumentami przez polskie
             Poradnie Psychologiczno - Pedagogiczne.
     </p>
+
     <div id='email_subscription'>
         <form onsubmit="postContactToGoogle()">
             <input type="email" id="email">
-            <button class="submit-button">Daj nam znać!</button>
+            <button class="btn submit">Daj nam znać!</button>
         </form>
     </div>
 

@@ -21,19 +21,34 @@ span {
 
 #email_subscription {
     position: absolute;
-    top: 90%;
+    bottom: 10%;
+    left: 5%;
+    width: 473px;
+    height: 100px;
 }
 
 #email {
-    /* position: absolute; */
     height: 50px;
     width: 300px;
+    font-size: 180%;
+    border: none;
+    border-radius: 10px;
 }
 
-.submit-button {
-    float: right;
-    /* position: absolute; */
-    /* right: 0px; */
-    height: 50px;
-    width: 100px;
+.btn {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+}
+
+.submit:hover {
+  background-color: #4CAF50;
+  color: white;
 }
