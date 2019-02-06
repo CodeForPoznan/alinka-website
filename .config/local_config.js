@@ -1,1 +1,2 @@
-var localGoogleFormUrl = "";
+var localGoogleFormUrl = undefined;
+var localGoogleFormEntry = undefined;

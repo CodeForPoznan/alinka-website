@@ -1,10 +1,11 @@
-googleFormUrl = localGoogleFormUrl ? localGoogleFormUrl : googleFormUrl;
+googleFormUrl = localGoogleFormUrl || googleFormUrl;
+googleFormEntry = localGoogleFormEntry || googleFormEntry;
 
-function postContactToGoogle() {
+function postContactToGoogle(event) {
     var email = $('#email').val();
     $.ajax({
         url: googleFormUrl,
-        data: { "entry_771587508": email },
+        data: { [googleFormEntry]: email },
         type: "POST",
         dataType: "xml",
         statusCode: {
@@ -16,4 +17,6 @@ function postContactToGoogle() {
             }
         }
     });
+
+    event.preventDefault();
 }
