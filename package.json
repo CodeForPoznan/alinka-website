@@ -1,0 +1,26 @@
+{
+  "name": "alinka-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maciek246/alinka-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maciek246/alinka-website/issues"
+  },
+  "homepage": "https://github.com/Maciek246/alinka-website#readme",
+  "dependencies": {
+    "serverless": "^1.38.0",
+    "serverless-offline-python": "^3.22.0",
+    "serverless-python-requirements": "^4.3.0",
+    "serverless-wsgi": "^1.7.1"
+  }
+}

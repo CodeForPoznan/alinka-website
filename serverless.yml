@@ -1,0 +1,51 @@
+service: alinka-website
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+  - serverless-offline-python
+
+custom:
+  defaultStage: dev
+  defaultRegion: eu-west-1
+  wsgi:
+    app: alinka_website.wsgi.application
+    packRequirements: false
+  pythonRequirements:
+    dockerziePip: non-linux
+  serverless-offline:
+    noAuth: true
+    host: 0.0.0.0
+    port: 8000
+  deploymentBucket: alinka-dev
+  awsRegion: eu-west-1
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ${self:custom.awsRegion}
+  deploymentBucket: ${self:custom.deploymentBucket}
+
+package:
+  exclude:
+    - .git/**
+    - .gitignore
+    - .makefile/**
+    - .pytest_cache/**
+    - .serverless/**
+    - docker-compose.yml
+    - docker-entrypoint.sh
+    - Dockerfile
+    - node_modules/**
+    - package-lock.json
+    - package.json
+    - README.md
+    - requirements.txt
+    - serverless.yml
+
+functions:
+  app:
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
