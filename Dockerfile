@@ -14,9 +14,7 @@ COPY package.json package-lock.json /workspace/
 
 RUN npm install
 
-RUN adduser --shell /bin/bash --disabled-password --gecos "" --uid 1001 code4poznan \
-    && chown -R code4poznan /workspace
-USER code4poznan
+USER node
 
 COPY . /workspace
 
