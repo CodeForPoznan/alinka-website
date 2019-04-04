@@ -1,4 +1,4 @@
-version: '3'
+version: '3.4'
 
 services:
   app:
@@ -11,4 +11,4 @@ services:
     volumes:
       - .:/workspace
     ports:
-      - "8000:8000"
+      - "3000:3000"
