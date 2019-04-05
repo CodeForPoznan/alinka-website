@@ -19,5 +19,4 @@ credentials:
 	docker-compose exec app aws configure --profile $(PROFILE)
 
 deploy:
-	docker-compose exec app npm run build
 	docker-compose exec -T app bash ./.makefile/deploy.sh
