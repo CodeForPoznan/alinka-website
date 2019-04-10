@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        USER_ID: $USER_ID
+    env_file:
+      - app.env
+    volumes:
+      - .:/workspace
+    ports:
+      - "3000:3000"
