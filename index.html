@@ -1,29 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/main.css">
     <link href='https://fonts.googleapis.com/css?family=Atma&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src=".config/config.js"></script>
     <script src=".config/local_config.js"></script>
     <script src="assets/js/send_form_to_google.js"></script>
     <title>Alinka - Łatwiejsze wydawanie orzeczeń</title>
 </head>
+
 <body>
-    <p id='introduction'>
-        <span>"Alinka"</span> jest aplikacją desktopową, która wspiera wydawanie orzeczeń, wraz z innymi niezbędnymi dokumentami przez polskie
-            Poradnie Psychologiczno - Pedagogiczne.
-    </p>
-
-    <div id="email_subscription">
-        <form onsubmit="postContactToGoogle(event)">
-            <input type="email" id="email">
-            <button class="btn submit">Daj nam znać!</button>
-        </form>
-    </div>
-
+    <header class="header">
+        <div class="header__logo">Logo</div>
+        <nav class="nav header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="https://codeforpoznan.pl/" class="nav__link">O nas</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Pomóż Alince</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro">
+        <h1 class="intro__title">Alinka</h1>
+        <h2 class="intro__description">tekst opisujący/zachęcający</h2>
+        <button class="button intro__button button--regular">Ściągnij</button>
+    </section>
+    <section class="description">
+        <h1 class="titles description__title">Automatyczne generowanie dokumentów</h1>
+        <p class="decription__text">Alinka jest aplikacją desktopową, która ma pomagać osobom z polskich Poradni
+            Psychologiczno-Pedagogicznym
+            odpowiedzialnym za wydawanie orzeczeń.</p>
+        <p class="decription__text">Idea powstała, dzięki Pani Alince wykonującą tę pracę. Wiąże się ona ze żmudnym
+            wypełnianiem tych samym
+            danych w wielu dokumentach, a tym samym prowadzi do godzin niepotrzebnej pracy. Chcąc wesprzeć cały
+            proces stworzyliśmy narzędzie, które zautomatyzuje generowanie dokumentów zgodnych z oficjalnymi
+            standardami Ministerstwa Edukacji Narodowej. Tym samym wzrośnie efektywność oraz zmaleje ilość błędów w
+            porównaniu z ręcznym wprowadzaniem danych.</p>
+        <p class="decription__text">Generowany dokument zostanie utworzony jako plik .docs, możliwy do edycji w Wordzie
+            i ewentualnego
+            dopisania dodatkowych informacji.</p>
+        <img src="assets/images/description-graphics.svg" alt="" class="description__graphics">
+    </section>
+    <section class="demo">
+        <h1 class="titles demo__title">Zobacz Alinkę w akcji</h1>
+        <div class="demo__box">demo</div>
+        <img src="assets/images/wave-left.svg" alt="" class="demo__wave--left">
+        <img src="assets/images/wave-right.svg" alt="" class="demo__wave--right">
+    </section>
+    <section class="features">
+        <dev class="feature features__feature">
+            <img src="assets/images/feature-free.svg" alt="" class="feature__icon">
+            <p class="feature__text">Za darmo</p>
+        </dev>
+        <dev class="feature features__feature">
+            <img src="assets/images/feature-easy.svg" alt="" class="feature__icon">
+            <p class="feature__text">Łatwa w osłudze</p>
+        </dev>
+        <dev class="feature features__feature">
+            <img src="assets/images/feature-safe.svg" alt="" class="feature__icon">
+            <p class="feature__text">Bezpieczna</p>
+        </dev>
+    </section>
+    <section class="download">
+        <h1 class="titles download__title">Zacznij pracować z Alinką!</h1>
+        <div class="download__buttons">
+            <button class="button download__button--color">Pobierz</button>
+            <button class="button download__button--regular">Zmień wersję</button>
+        </div>
+        <img src="assets/images/download-graphics.svg" alt="" class="download__graphics">
+    </section>
+    <footer class="footer">
+        <div class="icons footer__icons">
+            <img src="assets/images/Code_for_Poznan_final-01.png" alt="" class="icons__logo">
+            <p class="icons__email">hello@codeforpoznan.pl</p>
+            <a href="https://www.facebook.com/CodeForPL/" class="icons__facebook fab fa-facebook-f"></a>
+            <a href="https://pl.linkedin.com/company/codeforpoznan" class="icons__linkedin fab fa-linkedin-in"></a>
+            <a href="https://github.com/CodeForPoznan" class="icons__github fab fa-github"></a>
+        </div>
+        <div class="footer__author">
+            <p class="author__text">Created by <b>Code for Poznan</b></p>
+        </div>
+        <nav class="nav footer__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="https://codeforpoznan.pl/" class="nav__link">O nas</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Pomóż Alince</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
-</html>
 
+</html>
