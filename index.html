@@ -16,9 +16,9 @@
 
 <body>
     <header class="header">
-        <div class="header__logo">Logo</div>
         <nav class="nav header__nav">
             <ul class="nav__list">
+                <li class="nav__item"><a href="https://codeforpoznan.pl/" class="nav__logo">Logo</a></li>
                 <li class="nav__item"><a href="https://codeforpoznan.pl/" class="nav__link">O nas</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Pomóż Alince</a></li>
             </ul>
@@ -27,10 +27,10 @@
     <section class="intro">
         <h1 class="intro__title">Alinka</h1>
         <h2 class="intro__description">tekst opisujący/zachęcający</h2>
-        <button class="button intro__button button--regular">Ściągnij</button>
+        <button class="button button--regular">Ściągnij</button>
     </section>
     <section class="description">
-        <h1 class="titles description__title">Automatyczne generowanie dokumentów</h1>
+        <h3 class="titles description__title">Automatyczne generowanie dokumentów</h3>
         <p class="decription__text">Alinka jest aplikacją desktopową, która ma pomagać osobom z polskich Poradni
             Psychologiczno-Pedagogicznym
             odpowiedzialnym za wydawanie orzeczeń.</p>
@@ -45,41 +45,47 @@
             dopisania dodatkowych informacji.</p>
         <img src="assets/images/description-graphics.svg" alt="" class="description__graphics">
     </section>
-    <section class="demo">
-        <h1 class="titles demo__title">Zobacz Alinkę w akcji</h1>
-        <div class="demo__box">demo</div>
-        <img src="assets/images/wave-left.svg" alt="" class="demo__wave--left">
-        <img src="assets/images/wave-right.svg" alt="" class="demo__wave--right">
-    </section>
     <section class="features">
-        <dev class="feature features__feature">
-            <img src="assets/images/feature-free.svg" alt="" class="feature__icon">
-            <p class="feature__text">Za darmo</p>
-        </dev>
-        <dev class="feature features__feature">
-            <img src="assets/images/feature-easy.svg" alt="" class="feature__icon">
-            <p class="feature__text">Łatwa w osłudze</p>
-        </dev>
-        <dev class="feature features__feature">
-            <img src="assets/images/feature-safe.svg" alt="" class="feature__icon">
-            <p class="feature__text">Bezpieczna</p>
-        </dev>
+        <h3 class="titles features__title">Zobacz Alinkę w akcji</h3>
+        <div class="features__box">demo</div>
+        <div class="features__list">
+            <div class="feature features__item">
+                <img src="assets/images/feature-free.svg" alt="" class="feature__icon">
+                <p class="feature__text">Za darmo</p>
+            </div>
+            <div class="feature features__item">
+                <img src="assets/images/feature-easy.svg" alt="" class="feature__icon">
+                <p class="feature__text">Łatwa w osłudze</p>
+            </div>
+            <div class="feature features__item">
+                <img src="assets/images/feature-safe.svg" alt="" class="feature__icon">
+                <p class="feature__text">Bezpieczna</p>
+            </div>
+        </div>
     </section>
     <section class="download">
-        <h1 class="titles download__title">Zacznij pracować z Alinką!</h1>
+        <h3 class="titles download__title">Zacznij pracować z Alinką!</h3>
         <div class="download__buttons">
-            <button class="button download__button--color">Pobierz</button>
-            <button class="button download__button--regular">Zmień wersję</button>
+            <button class="button button--color">Pobierz</button>
+            <button class="button button--regular">Zmień wersję</button>
         </div>
         <img src="assets/images/download-graphics.svg" alt="" class="download__graphics">
     </section>
     <footer class="footer">
         <div class="icons footer__icons">
-            <img src="assets/images/Code_for_Poznan_final-01.png" alt="" class="icons__logo">
+            <img src="assets/images/Code_for_Poznan_final-01.png" alt="Logo" class="icons__logo">
             <p class="icons__email">hello@codeforpoznan.pl</p>
-            <a href="https://www.facebook.com/CodeForPL/" class="icons__facebook fab fa-facebook-f"></a>
-            <a href="https://pl.linkedin.com/company/codeforpoznan" class="icons__linkedin fab fa-linkedin-in"></a>
-            <a href="https://github.com/CodeForPoznan" class="icons__github fab fa-github"></a>
+            <div class="social-media icons__social-media">
+                <a href="https://www.facebook.com/CodeForPL/" class="social-media__item">
+                    <img src="assets/images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://pl.linkedin.com/company/codeforpoznan" class="social-media__item">
+                    <img src="assets/images/linked-in.svg" alt="linked-in">
+                </a>
+                <a href="https://github.com/CodeForPoznan" class="social-media__item">
+                    <img src="assets/images/github.svg" alt="Github-link">
+                </a>
+            </div>
         </div>
         <div class="footer__author">
             <p class="author__text">Created by <b>Code for Poznan</b></p>
