@@ -1,0 +1,43 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-queries('tablet') {
+        align-items: flex-start;
+        position: relative;
+        min-height: 615px;
+    }
+}
+
+.intro__title {
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-size: 80px;
+    font-weight: normal;
+
+    @include media-queries('tablet') {
+        font-size: 96px;
+    }
+}
+
+.intro__description {
+    padding-bottom: 50px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    @include media-queries('tablet') {
+        font-size: 26px;
+    }
+}
+
+.intro__graphics {
+    align-self: center;
+    max-width: 80%;
+    padding-top: 50px;
+
+    @include media-queries('tablet') {
+        position: absolute;
+        z-index: -2;
+    }
+}
