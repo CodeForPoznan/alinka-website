@@ -1,13 +1,14 @@
 @mixin media-queries($breakpoint) {
-    $size: map-get($map: $breakpoints, $key: $breakpoint);
+  $size: map-get(
+    $map: $breakpoints,
+    $key: $breakpoint
+  );
 
-    @if($size) {
-        @media #{$size} {
-            @content;
-        }
+  @if ($size) {
+    @media #{$size} {
+      @content;
     }
-
-    @else {
-        @error '"#{$breakpoint}" - not recognized size';
-    }
+  } @else {
+    @error '"#{$breakpoint}" - not recognized size';
+  }
 }
