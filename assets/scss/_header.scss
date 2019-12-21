@@ -1,23 +1,24 @@
 .header {
   background-image: url("../images/header-bg.svg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-.header__nav {
-  min-height: 13vw;
-}
-
 .nav__list {
-  // min-height: 13vw;
   display: flex;
   align-items: center;
   list-style: none;
   padding: 0 1rem;
+  @include media-queries("tablet") {
+    padding: 1.2rem 3rem 1.7rem;
+  }
 }
 
 .nav__item {
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem 2rem;
+  @include media-queries("tablet") {
+    padding: 0.2rem 3rem 2rem;
+  }
   text-decoration: none;
 }
 
@@ -38,12 +39,12 @@
 
 .nav__link {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: $font-light;
   text-decoration: none;
 
   @include media-queries("tablet") {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
 
