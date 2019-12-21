@@ -9,8 +9,12 @@
     "type": "git",
     "url": "git+https://github.com/CodeForPoznan/alinka-website.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Code for Poznan",
+    "email": "hello@codeforpoznan.pl",
+    "url": "https://codeforpoznan.pl/"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeForPoznan/alinka-website/issues"
   },
