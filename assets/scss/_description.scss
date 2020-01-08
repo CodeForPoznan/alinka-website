@@ -9,11 +9,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
   }
 
   &__title {
     padding-top: 100px;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 7px;
+      border-bottom: 3px solid #b4437b;
+      @include media-queries("desktop") {
+        width: 350px;
+        margin-left: 100px;
+      }
+    }
   }
 
   &__text {
@@ -21,7 +32,7 @@
     line-height: 1.5rem;
     padding: 5px 0;
     font-size: 12px;
-    @include media-queries("tablet") {
+    @include media-queries("desktop") {
       padding: 10px 300px 10px 0;
       font-size: 16px;
     }
@@ -29,8 +40,10 @@
 
   &__graphics {
     padding: 20px 0 30px;
-    @include media-queries("tablet") {
-      top: 120px;
+    z-index: -1;
+    margin: auto;
+    @include media-queries("desktop") {
+      top: 130px;
       right: 10px;
       position: absolute;
     }
