@@ -13,3 +13,13 @@ img {
 .alinka-section {
   padding: 0 10%;
 }
+
+.titles {
+  padding: 50px 0 30px;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  @include media-queries("tablet") {
+    font-size: 46px;
+  }
+}
