@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "sass": "gulp sass",
-    "watch": "gulp sass:watch"
+    "watch": "gulp sass:watch",
+    "browser-sync": "gulp browser-sync"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/CodeForPoznan/alinka-website#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
