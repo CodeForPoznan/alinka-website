@@ -1,32 +1,24 @@
 .footer{
-    background-image: url("../images/footerbg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../images/footerbg.svg") cover no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 3rem 1.7rem;
-
-    .icons {
-        &__logo {
-            max-width: 252px;
-        }
-
-        &__email{
-            color: $font-light;
-            font-family: Montserrat, sans-serif;
-            font-weight: bold;
-            margin-bottom: 1.2rem;
-        }
+    padding: 1.2rem 3rem 1.7rem;}
+.icons {
+    &__logo {
+        max-width: 252px;
     }
-    .social-media{
-        text-align: right;
-        
-        &__item{
-            margin-left: 1rem;
-            text-decoration: none;
-        }
+    &__email{
+        color: $font-light;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
     }
-    
 }
-
+.social-media{
+    text-align: right;    
+    &__item{
+        margin-left: 1rem;
+        text-decoration: none;
+    }
+}
