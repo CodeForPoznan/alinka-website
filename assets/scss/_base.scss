@@ -11,15 +11,18 @@ img {
 }
 
 .alinka-section {
-  padding: 0 10%;
+  padding: 0 35px;
+  @include media-queries("tablet") {
+    padding: 0 150px;
+  }
 }
 
 .titles {
   padding: 50px 0 30px;
-  font-family: "Oswald", sans-serif;
-  font-size: 28px;
+  font-family: $osfald;
+  font-size: $font-md;
   font-weight: 200;
   @include media-queries("tablet") {
-    font-size: 46px;
+    font-size: $font-lg;
   }
 }

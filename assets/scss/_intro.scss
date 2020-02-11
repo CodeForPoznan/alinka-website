@@ -11,23 +11,23 @@
 }
 
 .intro__title {
-    font-family: 'Dancing Script', cursive, sans-serif;
-    font-size: 80px;
+    font-family: $dancing-script;
+    font-size: $font-xl;
     font-weight: normal;
 
     @include media-queries('tablet') {
-        font-size: 96px;
+        font-size: $font-xxl;
     }
 }
 
 .intro__description {
     padding-bottom: 50px;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 18px;
+    font-family: $playfair;
+    font-size: $font-sm;
     font-weight: normal;
 
     @include media-queries('tablet') {
-        font-size: 26px;
+        font-size: $font-md;
     }
 }
 
