@@ -19,7 +19,7 @@
       content: "";
       display: block;
       padding-top: 7px;
-      border-bottom: 3px solid $secondary-color;
+      border-bottom: 3px solid $pink;
       @include media-queries("desktop") {
         width: 350px;
         margin-left: 100px;

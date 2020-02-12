@@ -30,7 +30,7 @@
   &__logo {
     font-family: $roboto;
     font-size: $font-md;
-    color: $font-light;
+    color: $white;
     text-decoration: none;
 
     @include media-queries("tablet") {
@@ -39,9 +39,9 @@
   }
 
   &__link {
-    font-family: $roboto-condensed;
+    font-family: $roboto;
     font-size: $font-xs;
-    color: $font-light;
+    color: $white;
     text-decoration: none;
 
     @include media-queries("tablet") {
