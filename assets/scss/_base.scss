@@ -9,3 +9,20 @@
 img {
   max-width: 100%;
 }
+
+.alinka-section {
+  padding: 0 35px;
+  @include media-queries("tablet") {
+    padding: 0 150px;
+  }
+}
+
+.titles {
+  padding: 50px 0 30px;
+  font-family: $osfald;
+  font-size: $font-md;
+  font-weight: 200;
+  @include media-queries("tablet") {
+    font-size: $font-lg;
+  }
+}

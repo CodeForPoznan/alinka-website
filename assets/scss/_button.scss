@@ -1,0 +1,23 @@
+.button {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    border: 2px solid $black;
+    font-family: $montserrat;
+    font-size: $font-xs;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $blue;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $black;
+    z-index: -1;
+}

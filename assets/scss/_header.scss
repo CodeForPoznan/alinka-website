@@ -28,24 +28,24 @@
   }
 
   &__logo {
-    font-family: "Roboto", sans-serif;
-    font-size: 30px;
-    color: $font-light;
+    font-family: $roboto;
+    font-size: $font-md;
+    color: $white;
     text-decoration: none;
 
     @include media-queries("tablet") {
-      font-size: 50px;
+      font-size: $font-lg;
     }
   }
 
   &__link {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 14px;
-    color: $font-light;
+    font-family: $roboto;
+    font-size: $font-xs;
+    color: $white;
     text-decoration: none;
 
     @include media-queries("tablet") {
-      font-size: 18px;
+      font-size: $font-sm;
     }
   }
 }
