@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+- '12.16'
+
+
+env:
+  global:
+    secure: H0rdHXkMtw0+EPtM78QvEz69cLWIFlNKLPOTbfdis2hjUZlxE1bhSakHruv6gohFCIqhzWZIqJH06ImxO851IwneI6+X6al5jwrYtxLjukU5s0/vZmBCQkxlH0Rt/Uzabg9ZHUTQ9oD8p27wyqMc6HJTUcsSHB8ygE4t48v2K6lAGuWqNccg/4pdU8sXjDrnc7ZU1JnNDGRs93OHMN3AKlUsTcOzo/vrEJfdMl8sAXRbvOUaDuXcF3l3WY8IRmiaWzVRY9YdiQrts69DTKuCEr9tOB04v94KOVlAxeTMY6HJUTHG/Lqb2ljIuYDnAVytuZJ0PJPJHDDJk8H9YmF1JIgwWf24osNMgfOBEdw8ENVU/22ucz06HzcNosUS6w4TuF8/EmX20137SJchEww5QJqqa+dVvc24LunObbiO7cOX2KiyyI4Q74tFZDrL0KtlCDenXRWr+MVkyw6YtQPbdWti3b15N6UxrQZinjd0I8sFS9bPPeFwrezZzd8N35R4Zq7UAYjylD+ejVn4isHL9yH2nENKW7Q+67ReYgkGAGodnuDEmjuAj6G76cItlBxRS+lecz4J+jLXJmXxfhBI0p4+9K04TXsMjw+KCzLfnqB0X337DH9+jB926GNegJFKRb3AWrBa6/SZ9ZpxhV+P0N7DBukQb9bi3vhVca1K2HQ=
+
+install:
+- pip install --user awscli==1.18.0
+- npm install
+
+script:
+- npx gulp sass
+- |
+  if [[ "$TRAVIS_REPO_SLUG" == "CodeForPoznan/alinka-website" ]] &&
+     [[ "$TRAVIS_BRANCH" == "master" ]] &&
+     [ "$TRAVIS_PULL_REQUEST" = false ];
+  then
+    aws s3 sync . s3://codeforpoznan-public/alinka_website/ --delete --exclude "assets/scss/*" --exclude "node_modules/*" --exclude ".git/*"
+    aws cloudfront create-invalidation --distribution-id E2LRB6U4UM753Y --paths "/*"
+  fi

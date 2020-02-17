@@ -1,5 +1,7 @@
 {
   "name": "alinka-website",
+  "homepage": "https://alinka.io",
+  "license": "MIT",
   "version": "1.0.0",
   "scripts": {
     "sass": "gulp sass",
@@ -14,11 +16,9 @@
     "email": "hello@codeforpoznan.pl",
     "url": "https://codeforpoznan.pl/"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeForPoznan/alinka-website/issues"
   },
-  "homepage": "https://github.com/CodeForPoznan/alinka-website#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
