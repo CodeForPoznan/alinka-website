@@ -1,19 +1,16 @@
 .footer{
-    background-image: url("../images/footerbg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../images/footerbg.svg") center/cover no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 3rem 1.7rem;
-    
-    .social-media{
-        text-align: right;
+    padding: 1.2rem 3rem 1.7rem;}
+
+    .social-media {
+        text-align: right;    
         
         &__item{
             margin-left: 1rem;
             text-decoration: none;
         }
-    } 
+    }
 }
-
