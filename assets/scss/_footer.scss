@@ -6,19 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 3rem 1.7rem;
-
-    .icons {
-        &__logo {
-            max-width: 252px;
-        }
-
-        &__email{
-            color: $font-light;
-            font-family: Montserrat, sans-serif;
-            font-weight: bold;
-            margin-bottom: 1.2rem;
-        }
-    }
+    
     .social-media{
         text-align: right;
         
@@ -26,7 +14,6 @@
             margin-left: 1rem;
             text-decoration: none;
         }
-    }
-    
+    } 
 }
 
