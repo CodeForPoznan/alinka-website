@@ -1,0 +1,26 @@
+.download {
+    position: relative;
+}
+
+.download .button {
+    background-color: $pink;
+    
+}
+.download__title {
+    display: inline-block;
+}
+
+.download__title:after {
+    display: block;
+    content: "";
+    border-bottom: 3px solid $pink;
+    margin: 10px 30px 0 10px;
+}
+
+@media (min-width: 992px) {
+    .download__graphics {
+        top: 30px;
+        right: 10px;
+        position: absolute;
+    }
+}
