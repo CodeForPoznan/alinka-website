@@ -25,4 +25,9 @@ img {
   @include media-queries("tablet") {
     font-size: $font-lg;
   }
+    &::after {
+          content: "";
+          display: block;
+          border-bottom: 3px solid $pink;
+    }
 }
