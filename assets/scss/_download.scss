@@ -1,19 +1,19 @@
 .download {
     position: relative;
-}
 
-.download__title {
-    display: inline-block;
-}
+    &__title {
+        display: inline-block;
+    }
 
-.download__title:after {
-    margin: 10px 30px 0 10px;
-}
+    &__title:after {
+        margin: 10px 30px 0 10px;
+    }
 
-@include media-queries("desktop") {
-    .download__graphics {
-        top: 30px;
-        right: 10px;
-        position: absolute;
+    @include media-queries("desktop") {
+        &__graphics {
+            top: 30px;
+            right: 10px;
+            position: absolute;
+        }
     }
 }
