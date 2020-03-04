@@ -1,28 +1,25 @@
 .features {
-    
-}
-
-.features__list {
+  &__list{
     background: $white;
     padding: 20px;
     box-shadow: 0px 2px 3px 0px $gray;
     font-family: $montserrat;
     font-size: $font-xs;
     display: flex;
-}
+    }
 
-.features__item {
+  &__item {
     width: 33.3333%;
     padding: 20px 0;
     text-align: center;
     border-right: 1px solid $gray;
-}
+    }
 
-.features__item:last-child {
+  &__item:last-child {
     border-right: none;
-}
+    }
 
-.feature__icon {
+  &__icon {
     margin-bottom: 20px;
+    }
 }
-
