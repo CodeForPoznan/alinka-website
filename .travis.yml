@@ -1,24 +1,23 @@
+if: type = push and branch = master and repo = 'CodeForPoznan/alinka-website'
+
 language: node_js
-
-node_js:
-- '12.16'
-
+node_js: ['12.16']
 
 env:
   global:
-  - secure: H0rdHXkMtw0+EPtM78QvEz69cLWIFlNKLPOTbfdis2hjUZlxE1bhSakHruv6gohFCIqhzWZIqJH06ImxO851IwneI6+X6al5jwrYtxLjukU5s0/vZmBCQkxlH0Rt/Uzabg9ZHUTQ9oD8p27wyqMc6HJTUcsSHB8ygE4t48v2K6lAGuWqNccg/4pdU8sXjDrnc7ZU1JnNDGRs93OHMN3AKlUsTcOzo/vrEJfdMl8sAXRbvOUaDuXcF3l3WY8IRmiaWzVRY9YdiQrts69DTKuCEr9tOB04v94KOVlAxeTMY6HJUTHG/Lqb2ljIuYDnAVytuZJ0PJPJHDDJk8H9YmF1JIgwWf24osNMgfOBEdw8ENVU/22ucz06HzcNosUS6w4TuF8/EmX20137SJchEww5QJqqa+dVvc24LunObbiO7cOX2KiyyI4Q74tFZDrL0KtlCDenXRWr+MVkyw6YtQPbdWti3b15N6UxrQZinjd0I8sFS9bPPeFwrezZzd8N35R4Zq7UAYjylD+ejVn4isHL9yH2nENKW7Q+67ReYgkGAGodnuDEmjuAj6G76cItlBxRS+lecz4J+jLXJmXxfhBI0p4+9K04TXsMjw+KCzLfnqB0X337DH9+jB926GNegJFKRb3AWrBa6/SZ9ZpxhV+P0N7DBukQb9bi3vhVca1K2HQ=
+    - secure: Kx07mV0WtXVu7cfoN/XRi5woPwEiYAlisXfdKAyp4fNdA9bXEFfUQIaRIsKkn6CEHC0zfP/124/Y5FWcJMgwS6HSilfyD3lE2g/PpggxkE0t9IKWTzvVhH+1h0fVW7OMFSpcfRm7x8hubQikiQzQnJdjd15hOhXp4ITR2Vz41cFZbEhOuTNL20gZjqe8OVxnDE4G4nrtp+i0z+u0HMX3tzPgswdroBkvBIOuH0ML9hgiOwQXUY6oD8q/R0oS16UXCW32GbXU3O76hK/YkR9CBAnXUMfpIOJuIjlaoTg1asoD6itkUC2VcmsiCfsI/+sL+C0+PbPchrPMF5635+x5v86MIVKG8YdYKO2Wi1/szO6ecSgDxUGrOyVK+lHVj7JtDGcW51JvjDitFDROPViUGBoNeKOOn2+F6LvwIS0SBuMlifZAtV3TbkeDBb87Lp76kOiW1BhF7TAEKG8U7f9pn6IvoFg8fFS/2J+0tBkUQyHcsFKCPzeTYQtoOIeqlORbk9IlBYt7EQ8qgA4SNrpFjUHtGYrw2yS4Is4KH8NpmF2UaAp4qjtdD0GheH2yZRUfaFoBSEUHdLVubvGO9WQqu7mwkz9bOmevYlFTSgZqlC8LJ2+FRiBlquy8Gjdu56SBoIJujHFalEG2RiwG3mWZVO88FFODmdB+p84sD6NwACk=
 
 install:
-- pip install --user awscli==1.18.0
-- npm install
+  - pip install --user awscli==1.18.0
+  - npm install
 
 script:
-- npx gulp sass
-- |
-  if [[ "$TRAVIS_REPO_SLUG" == "CodeForPoznan/alinka-website" ]] &&
-     [[ "$TRAVIS_BRANCH" == "master" ]] &&
-     [ "$TRAVIS_PULL_REQUEST" = false ];
-  then
-    aws s3 sync . s3://codeforpoznan-public/alinka_website/ --delete --exclude "assets/scss/*" --exclude "node_modules/*" --exclude ".git/*"
-    aws cloudfront create-invalidation --distribution-id E2LRB6U4UM753Y --paths "/*"
-  fi
+  - npx gulp sass
+  - aws s3 sync . s3://codeforpoznan-public/dev_alinka_website/
+    --delete
+    --exclude ".git/*"
+    --exclude "assets/scss/*"
+    --exclude "node_modules/*"
+  - aws cloudfront create-invalidation
+    --distribution-id E2LRB6U4UM753Y
+    --paths "/*"
