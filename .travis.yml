@@ -5,7 +5,7 @@ node_js: ['12.16']
 
 env:
   global:
-    - secure: <waits for input>
+    - secure: Kx07mV0WtXVu7cfoN/XRi5woPwEiYAlisXfdKAyp4fNdA9bXEFfUQIaRIsKkn6CEHC0zfP/124/Y5FWcJMgwS6HSilfyD3lE2g/PpggxkE0t9IKWTzvVhH+1h0fVW7OMFSpcfRm7x8hubQikiQzQnJdjd15hOhXp4ITR2Vz41cFZbEhOuTNL20gZjqe8OVxnDE4G4nrtp+i0z+u0HMX3tzPgswdroBkvBIOuH0ML9hgiOwQXUY6oD8q/R0oS16UXCW32GbXU3O76hK/YkR9CBAnXUMfpIOJuIjlaoTg1asoD6itkUC2VcmsiCfsI/+sL+C0+PbPchrPMF5635+x5v86MIVKG8YdYKO2Wi1/szO6ecSgDxUGrOyVK+lHVj7JtDGcW51JvjDitFDROPViUGBoNeKOOn2+F6LvwIS0SBuMlifZAtV3TbkeDBb87Lp76kOiW1BhF7TAEKG8U7f9pn6IvoFg8fFS/2J+0tBkUQyHcsFKCPzeTYQtoOIeqlORbk9IlBYt7EQ8qgA4SNrpFjUHtGYrw2yS4Is4KH8NpmF2UaAp4qjtdD0GheH2yZRUfaFoBSEUHdLVubvGO9WQqu7mwkz9bOmevYlFTSgZqlC8LJ2+FRiBlquy8Gjdu56SBoIJujHFalEG2RiwG3mWZVO88FFODmdB+p84sD6NwACk=
 
 install:
   - pip install --user awscli==1.18.0
