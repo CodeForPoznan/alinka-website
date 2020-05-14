@@ -17,9 +17,8 @@
 
     &::after {
       content: "";
-      display: block;
       padding-top: 7px;
-      border-bottom: 3px solid $pink;
+
       @include media-queries("desktop") {
         width: 350px;
         margin-left: 100px;
@@ -32,6 +31,7 @@
     line-height: 1.5rem;
     padding: 5px 0;
     font-size: $font-xxs;
+
     @include media-queries("desktop") {
       padding: 10px 300px 10px 0;
       font-size: $font-xs;
@@ -41,6 +41,7 @@
   &__graphics {
     padding: 20px 0 30px;
     margin: auto;
+
     @include media-queries("desktop") {
       top: 130px;
       right: 10px;

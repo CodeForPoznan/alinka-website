@@ -1,0 +1,54 @@
+.download {
+    position: relative;
+
+    &__title {
+        display: block;
+        text-align: center;
+        margin: auto;
+        max-width: 400px;
+
+        &:after {
+            margin: 10px 10px 0 10px;
+        }
+    }
+
+    &__graphics {
+        display: none;
+    }
+
+    &__buttons {
+        text-align: center;
+    }
+
+    @include media-queries ("tablet") {
+
+        &__title {
+            display: inline-block;
+            margin: 0;
+            max-width: none;
+
+            &:after {
+                margin: 10px 30px 0 10px;
+            }
+        }
+
+        &__graphics {
+            top: 130px;
+            right: 10px;
+            position: absolute;
+            display: block;
+            width: 300px;
+        }
+
+        &__buttons {
+            text-align: left;
+        }
+    }
+
+    @include media-queries("desktop") {
+        &__graphics {
+            top: 30px;
+            width: auto;
+        }
+    }
+}
