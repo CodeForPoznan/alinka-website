@@ -12,6 +12,9 @@ img {
 
 .alinka-section {
   padding: 0 35px;
+  max-width: $max-page-width;
+  margin: auto;
+
   @include media-queries("tablet") {
     padding: 0 150px;
   }
@@ -22,7 +25,14 @@ img {
   font-family: $osfald;
   font-size: $font-md;
   font-weight: 200;
+
   @include media-queries("tablet") {
     font-size: $font-lg;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid $pink;
   }
 }
