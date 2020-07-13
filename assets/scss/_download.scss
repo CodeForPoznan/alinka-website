@@ -2,7 +2,7 @@
     position: relative;
 
     @include media-queries ("tablet") {
-    min-height: 360px;
+        min-height: 360px;
     }
 
     &__title {
