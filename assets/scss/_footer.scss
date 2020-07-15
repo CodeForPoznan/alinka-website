@@ -1,0 +1,27 @@
+.footer {
+    background: url("../images/footerbg.svg") center/cover no-repeat;
+    text-align: center;
+    padding: 1.2rem 3rem 1.7rem;
+
+    @include media-queries("tablet") {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.social-media {
+
+    &__item {
+        margin: 0 0.75rem 0 0.75rem;
+        text-decoration: none;
+
+        img {
+            height: 26px;
+        }
+    }
+
+    @include media-queries("tablet") {
+        text-align: right;
+    }
+}
