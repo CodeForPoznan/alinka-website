@@ -1,14 +1,20 @@
 .button {
-    position: relative;
-    width: 180px;
-    height: 50px;
-    border: 2px solid $black;
-    font-family: $montserrat;
-    font-size: $font-xs;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $white;
-    background-color: $blue;
+  position: relative;
+  width: 180px;
+  height: 50px;
+  border: 2px solid $black;
+  font-family: $montserrat;
+  font-size: $font-xs;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 300ms;
+    background-color: $lightblue;
+  }
 
   &::after {
     content: '';
@@ -22,6 +28,11 @@
   }
 
   &--vivid {
-    background-color: $pink;  
+    background-color: $pink;
+
+    &:hover {
+      transition: background-color 300ms;
+      background-color: $lightpink;
+    }
   }
 }
